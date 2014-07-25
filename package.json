@@ -1,0 +1,23 @@
+{
+  "name": "chirp-follower",
+  "version": "0.0.1",
+  "description": "twitter follower utils",
+  "main": "index.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://ddo@github.com/ddo/chirp-follower.git"
+  },
+  "author": "ddo <joeddo89@gmail.com> (http://ddo.me/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ddo/chirp-follower/issues"
+  },
+  "homepage": "https://github.com/ddo/chirp-follower",
+  "dependencies": {
+    "chirp-rest": "^1.0.0",
+    "debug": "*"
+  }
+}
