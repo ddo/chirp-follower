@@ -36,7 +36,7 @@ Follower.prototype.follow = function(user, callback) {
     self.rest.post('https://api.twitter.com/1.1/friendships/create.json', {
         user_id: user_id,
         follow: true
-    }, function(err, res, body) {
+    }, function(err, res) {
         if(err) {
             debug('#follow err', err);
             return callback(err);
@@ -44,7 +44,7 @@ Follower.prototype.follow = function(user, callback) {
 
         debug('#follow success');
 
-        return callback(null, body);
+        return callback(null, res);
     });
 };
 
@@ -61,7 +61,7 @@ Follower.prototype.unfollow = function(user, callback) {
 
     self.rest.post('https://api.twitter.com/1.1/friendships/destroy.json', {
         user_id: user_id,
-    }, function(err, res, body) {
+    }, function(err, res) {
         if(err) {
             debug('#unfollow err', err);
             return callback(err);
@@ -69,6 +69,6 @@ Follower.prototype.unfollow = function(user, callback) {
 
         debug('#unfollow success');
 
-        return callback(null, body);
+        return callback(null, res);
     });
 };
